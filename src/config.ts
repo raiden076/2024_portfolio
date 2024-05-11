@@ -25,21 +25,21 @@ interface IConfig {
 
 export const Config: IConfig = {
   me: {
-    name: "John Doe",
-    job: "backend engineer",
-    started: "1970-01-01",
-    stack: "Scratch",
-    hobby: "gamble my life savings",
-    projectLink: "https://github.com/JohnDoe?tab=repositories",
+    name: "Arkapravo Das",
+    job: "product engineer",
+    started: "2022-05-09",
+    stack: "FORTRAN",
+    hobby: "just chilling",
+    projectLink: "https://github.com/raiden076?tab=repositories",
   },
   socials: {
-    twitter: "https://twitter.com/JohnDoe",
-    github: "https://github.com/JohnDoe",
+    twitter: "https://twitter.com/arkaprav0",
+    github: "https://github.com/raiden076",
   },
   projects: {
-    "996.ICU": {
-      url: "https://github.com/996icu/996.ICU",
-      tags: ["ccp", "chinese", "overwork", "labor", "996"],
+    "SalesUP Worflows": {
+      url: "#",
+      tags: ["jotai/atom", "react", "nextjs", "cloudflare"],
     },
     Linux: {
       url: "https://github.com/torvalds/linux",
