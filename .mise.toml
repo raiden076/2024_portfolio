@@ -1,0 +1,8 @@
+[tools]
+node = "latest"
+pnpm = "latest"
+
+[env]
+TURSO_DATABASE_URL='libsql://personal-trackers-raiden076.turso.io'
+TURSO_AUTH_TOKEN='eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjA1NTk4MTYsInAiOnsicnciOnsibnMiOlsiYTc2YzYzZDktYTg0NS00MzAwLTkyMGQtNWVjY2I2ZjViOGQ1Il19fX0.PbfliI7koVqVOR1Jhp5FhFY2Qg5UEjAQQznTN75hZFJp_ywcqw9XnoEU4os1-EVJOhGm0A1DWdzDELn73UrRDQ'
+

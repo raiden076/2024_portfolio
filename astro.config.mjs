@@ -8,5 +8,8 @@ export default defineConfig({
   prefetch: true,
   integrations: [tailwind()],
   output: "hybrid",
+  experimental: {
+    actions: true,
+  },
   adapter: cloudflare(),
 });

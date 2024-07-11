@@ -1,0 +1,23 @@
+import { actions, getActionProps } from "astro:actions";
+
+export function Newsletter() {
+  return (
+    <form
+      method="POST"
+      onSubmit={async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const result = await actions.newsletter(formData);
+      }}
+    >
+      <input {...getActionProps(actions.newsletter)} />
+      <label htmlFor="email">Email</label>
+      <input name="email" type="email" id="email" />
+
+      <label htmlFor="receivePromo">Receive promotional emails</label>
+      <input name="receivePromo" type="checkbox" id="receivePromo" checked />
+
+      <button type="submit">Sign Up</button>
+    </form>
+  );
+}
