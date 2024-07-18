@@ -21,6 +21,7 @@ const posts = (await getCollection("posts")).sort(function (
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
 });
 console.log(JSON.stringify(rows));
+// todo: do something cool
 ---
 
 <Layout>
