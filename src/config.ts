@@ -28,7 +28,7 @@ export const Config: IConfig = {
     name: "Arkapravo Das",
     job: "product engineer",
     started: "2022-05-09",
-    stack: "FORTRAN",
+    stack: "TypeScript",
     hobby: "just chilling",
     projectLink: "https://github.com/raiden076?tab=repositories",
   },
