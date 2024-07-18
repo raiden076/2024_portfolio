@@ -4,7 +4,9 @@ import FloatingBox from "../components/SmallBox.astro";
 import { Picture } from "astro:assets";
 import iconImage from "../assets/icon.png";
 import { Config } from "../config";
+import { turso } from "../db/turso";
 
+const { rows } = await turso.execute("SELECT * FROM users");
 const years = () => {
   const start = new Date(Config.me.started);
   const now = new Date();
@@ -14,10 +16,11 @@ const years = () => {
 import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort(function (
   first: any,
-  second: any
+  second: any,
 ) {
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
 });
+console.log(JSON.stringify(rows));
 ---
 
 <Layout>
