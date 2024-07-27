@@ -28,8 +28,8 @@ export const Config: IConfig = {
     name: "Arkapravo Das",
     job: "product engineer",
     started: "2022-05-09",
-    stack: "TypeScript",
-    hobby: "just chilling",
+    stack: "TypeScript and fullstack web, occasionally ML stuff",
+    hobby: "Cyberpunk themes, as you can already see 👀",
     projectLink: "https://github.com/raiden076?tab=repositories",
   },
   socials: {
@@ -37,8 +37,8 @@ export const Config: IConfig = {
     github: "https://github.com/raiden076",
   },
   projects: {
-    "SalesUP Worflows": {
-      url: "#",
+    "Notes & blog": {
+      url: "https://notes.arkaprav0.in",
       tags: ["jotai/atom", "react", "nextjs", "cloudflare"],
     },
     Linux: {
