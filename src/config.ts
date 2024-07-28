@@ -28,8 +28,8 @@ export const Config: IConfig = {
     name: "Arkapravo Das",
     job: "product engineer",
     started: "2022-05-09",
-    stack: "TypeScript and fullstack web, occasionally ML stuff",
-    hobby: "Cyberpunk themes, as you can already see 👀",
+    stack: "TypeScript, Fullstack web and occasionally ML stuff",
+    hobby: "playing guitar and Cyberpunk themes, as you can already see 👀",
     projectLink: "https://github.com/raiden076?tab=repositories",
   },
   socials: {
