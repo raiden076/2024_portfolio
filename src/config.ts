@@ -1,4 +1,4 @@
-import icon from "../src/assets/icon.png";
+import icon from "../src/assets/icon-av.png";
 
 interface IConfig {
   me: {
@@ -29,13 +29,14 @@ export const Config: IConfig = {
     job: "product engineer",
     started: "2022-05-09",
     stack: "TypeScript, Fullstack web and occasionally ML stuff",
-    hobby: "playing guitar, Cyberpunk themes and Pikachu, as you can already see 👀",
+    hobby: "playing guitar, Cyberpunk themes and Pikachu 👀",
     projectLink: "https://github.com/raiden076?tab=repositories",
   },
   socials: {
     github: "https://github.com/raiden076",
     X: "https://x.com/arkaprav0",
     instagram: "https://instagram.com/arkaprav0",
+    "contact me;": "mailto:hi@arkaprav0.in",
   },
   projects: {
     "Notes & blog": {

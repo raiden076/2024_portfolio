@@ -17,12 +17,12 @@ portfolio/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
-│   │   ├── posts/
+│   │   ├── projects/
 │   │   │   └── index.astro
 │   │   ├── index.astro
 │   │   └── 404.astro
 │   ├── content/
-│   │   ├── posts/
+│   │   ├── projects/
 │   │   │   ├── lorem-ipsum.md
 │   │   │   └── lorem-ipsum-2.md
 │   │   └── config.ts

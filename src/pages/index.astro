@@ -12,7 +12,7 @@ const years = () => {
 };
 
 import { getCollection } from "astro:content";
-const posts = (await getCollection("posts")).sort(function (
+const projects = (await getCollection("projects")).sort(function (
   first: any,
   second: any,
 ) {
@@ -60,17 +60,6 @@ const posts = (await getCollection("posts")).sort(function (
               </ul>
             </div>
           </div>
-          <style>
-            .hideImage {
-              user-drag: none;
-              user-select: none;
-              -moz-user-select: none;
-              -webkit-user-drag: none;
-              -webkit-user-select: none;
-              -ms-user-select: none;
-              pointer-events: none;
-            }
-          </style>
           <div class="ml-auto hidden sm:block">
             <div class="avatar">
               <div class="w-60 rounded">
@@ -78,7 +67,7 @@ const posts = (await getCollection("posts")).sort(function (
                   class:list={["hideImage"]}
                   src={iconImage}
                   formats={["avif", "webp"]}
-                  alt="Profile icon"
+                  alt="Glowing Pikachu with a pokéball"
                   loading="eager"
                 />
               </div>
@@ -119,17 +108,17 @@ const posts = (await getCollection("posts")).sort(function (
 
       <article class="flex flex-col gap-8">
         <header class="flex w-full flex-row justify-between gap-2">
-          <h3 class="text-lg">Latest posts</h3>
+          <h3 class="text-lg">Latest projects</h3>
           <a
-            href="/posts"
+            href="/projects"
             class="text-sm text-primary underline decoration-dashed underline-offset-8"
             rel="noreferrer"
-            >See all posts
+            >See all projects
           </a>
         </header>
         <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
           {
-            posts.map((post: any) => (
+            projects.map((post: any) => (
               <FloatingBox
                 title={post.data.title}
                 publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
@@ -138,7 +127,7 @@ const posts = (await getCollection("posts")).sort(function (
                   day: "numeric",
                 })}
                 description={post.data.description}
-                href={"/posts/" + post.slug}
+                href={"/projects/" + post.slug}
               />
             ))
           }
@@ -147,3 +136,15 @@ const posts = (await getCollection("posts")).sort(function (
     </div>
   </main>
 </Layout>
+
+<style>
+  .hideImage {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+  }
+</style>
