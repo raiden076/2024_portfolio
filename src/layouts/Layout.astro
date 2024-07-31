@@ -61,7 +61,7 @@ const currentPath = Astro.url.pathname;
                 class={currentPath.startsWith("/projects")
                   ? "text-primary"
                   : ""}
-                href="/projects">projects</a
+                href="/projects">Projects</a
               >
             </li>
           </ul>
@@ -79,8 +79,9 @@ const currentPath = Astro.url.pathname;
       .custom-breadcrumbs > ul {
         display: flex;
         align-items: center;
-        white-space: nowrap;
+        white-space: normal; /* Change from nowrap to normal */
         min-height: min-content;
+        flex-wrap: wrap; /* Add this line to allow wrapping */
       }
 
       .custom-breadcrumbs > ul > li {

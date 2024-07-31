@@ -28,15 +28,15 @@ export const Config: IConfig = {
     name: "Arkapravo Das",
     job: "product engineer",
     started: "2022-05-09",
-    stack: "TypeScript, Fullstack web and occasionally ML stuff",
+    stack: "TypeScript, Fullstack web",
     hobby: "playing guitar, Cyberpunk themes and Pikachu 👀",
     projectLink: "https://github.com/raiden076?tab=repositories",
   },
   socials: {
     github: "https://github.com/raiden076",
     X: "https://x.com/arkaprav0",
-    instagram: "https://instagram.com/arkaprav0",
-    "contact me;": "mailto:hi@arkaprav0.in",
+    // instagram: "https://instagram.com/arkaprav0",
+    // "mail": "mailto:hi@arkaprav0.in",
   },
   projects: {
     "Notes & blog": {

@@ -31,33 +31,48 @@ const projects = (await getCollection("projects")).sort(function (
             <h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
               I am a <strong class="font-normal text-primary"
                 >{Config.me.job}</strong
-              > with over
+              >, with over
               <strong class="font-normal text-primary">{years} years</strong> of
               experience. I am currently working with<strong
                 class="font-normal text-primary"
               >
                 {Config.me.stack}</strong
-              >; <br />
+              >, <strong class="font-normal">and occasionally </strong><strong
+                class="font-normal text-primary">ML stuff</strong
+              >
+              <br />
+              <br />
+
               Apart from writing code, I like {Config.me.hobby}
             </h2>
-            <div class="custom-breadcrumbs">
-              <ul>
-                {
-                  Object.keys(Config.socials).map((social) => (
-                    <li>
-                      <a
-                        href={
-                          Config.socials[social as keyof typeof Config.socials]
-                        }
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        {social.charAt(0).toUpperCase() + social.slice(1)}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
+            <div>
+              <div>
+                <strong>/Contact</strong>
+              </div>
+              <div class="custom-breadcrumbs">
+                <ul>
+                  <li>
+                    <a href={"mailto:hi@arkaprav0.in"}> hi@arkaprav0.in </a>
+                  </li>
+                  {
+                    Object.keys(Config.socials).map((social) => (
+                      <li>
+                        <a
+                          href={
+                            Config.socials[
+                              social as keyof typeof Config.socials
+                            ]
+                          }
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {social.charAt(0).toUpperCase() + social.slice(1)}
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
             </div>
           </div>
           <div class="ml-auto hidden sm:block">
@@ -75,10 +90,10 @@ const projects = (await getCollection("projects")).sort(function (
           </div>
         </div>
       </article>
-
+      <div style="border-bottom: 3px solid black; width: 100%;"></div>
       <article class="flex flex-col gap-8">
         <header class="flex w-full flex-row justify-between gap-2">
-          <h3 class="text-lg">Featured projects</h3>
+          <h3 class="text-lg">/Featured projects</h3>
           <a
             href={Config.me.projectLink}
             class="text-sm text-primary underline decoration-dashed underline-offset-8"
@@ -121,13 +136,9 @@ const projects = (await getCollection("projects")).sort(function (
             projects.map((post: any) => (
               <FloatingBox
                 title={post.data.title}
-                publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-                description={post.data.description}
                 href={"/projects/" + post.slug}
+                description={post.data.description}
+                tags={post.data.tags}
               />
             ))
           }
