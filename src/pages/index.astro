@@ -46,8 +46,8 @@ const projects = (await getCollection("projects")).sort(function (
               Apart from writing code, I like {Config.me.hobby}
             </h2>
             <div>
-              <div>
-                <strong>/Contact</strong>
+              <div class="pb-2">
+                <strong>/contact me</strong>
               </div>
               <div class="custom-breadcrumbs">
                 <ul>
@@ -90,10 +90,30 @@ const projects = (await getCollection("projects")).sort(function (
           </div>
         </div>
       </article>
+
       <div style="border-bottom: 3px solid black; width: 100%;"></div>
+
+      <article class="flex flex-col gap-8">
+        <section class="justify-center items-stretch">
+          <FloatingBox
+            title="Check out notes-n-blog"
+            href="https://notes.arkaprav0.in"
+            highlight={true}
+            description="All my notes categorized via tags and a few blog"
+            tags={[
+              "react",
+              "cloudflare",
+              "matrices",
+              "determinants",
+              "docusaurus",
+            ]}
+          />
+        </section>
+      </article>
+
       <article class="flex flex-col gap-8">
         <header class="flex w-full flex-row justify-between gap-2">
-          <h3 class="text-lg">/Featured projects</h3>
+          <h3 class="text-lg">/featured projects</h3>
           <a
             href={Config.me.projectLink}
             class="text-sm text-primary underline decoration-dashed underline-offset-8"
@@ -106,24 +126,36 @@ const projects = (await getCollection("projects")).sort(function (
           class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch"
         >
           {
-            Object.keys(Config.projects).map((project) => (
-              <FloatingBox
-                title={project}
-                href={
-                  Config.projects[project as keyof typeof Config.projects].url
-                }
-                tags={
-                  Config.projects[project as keyof typeof Config.projects].tags
-                }
-              />
-            ))
+            projects
+              .filter((post: any) => post.data.featured)
+              .map((post: any) => (
+                <FloatingBox
+                  title={post.data.title}
+                  href={"/projects/" + post.slug}
+                  description={post.data.description}
+                  tags={post.data.tags}
+                />
+              ))
           }
         </section>
       </article>
 
       <article class="flex flex-col gap-8">
+        <header class="flex w-full">
+          <h3 class="text-lg">/experience</h3>
+        </header>
+        Coming soon. ..!
+      </article>
+      <article class="flex flex-col gap-8">
+        <header class="flex w-full">
+          <h3 class="text-lg">/education</h3>
+        </header>
+        Coming soon. ..!
+      </article>
+
+      <article class="flex flex-col gap-8">
         <header class="flex w-full flex-row justify-between gap-2">
-          <h3 class="text-lg">Latest projects</h3>
+          <h3 class="text-lg">/latest projects</h3>
           <a
             href="/projects"
             class="text-sm text-primary underline decoration-dashed underline-offset-8"

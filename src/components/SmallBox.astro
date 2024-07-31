@@ -5,15 +5,16 @@ interface Props {
   description?: string;
   href: string;
   tags?: string[];
+  highlight?: boolean;
 }
 
-const { title, publishedAt, description, href, tags } = Astro.props;
+const { title, publishedAt, description, href, tags, highlight } = Astro.props;
 ---
 
 <a
   href={href}
   target={href.startsWith("http") ? "_blank" : "_self"}
-  class="group flex cursor-pointer flex-col gap-2 rounded-md border border-neutral p-4 transition-all duration-300 hover:-translate-y-1.5"
+  class=`group flex cursor-pointer flex-col gap-2 rounded-md border ${highlight ? "border-primary border-2" : "border-neutral"} p-4 transition-all duration-300 hover:-translate-y-1.5`
   data-astro-prefetch
 >
   <div class="flex w-full justify-between gap-3 flex-row items-start">
