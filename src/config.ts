@@ -12,12 +12,21 @@ interface IConfig {
   socials: {
     [name: string]: string;
   };
-  projects: {
-    [name: string]: {
-      url: string;
-      tags: string[];
-    };
-  };
+  experience: {
+    title: string;
+    company: string;
+    companyUrl?: string;
+    tagline: string;
+    projects: string[];
+    stack: string[];
+  }[];
+  education: {
+    title: string;
+    institute: string;
+    instituteUrl?: string;
+    started: string;
+    score: string;
+  }[]
   og: {
     image: string;
   };
@@ -35,19 +44,49 @@ export const Config: IConfig = {
   socials: {
     github: "https://github.com/raiden076",
     X: "https://x.com/arkaprav0",
-    // instagram: "https://instagram.com/arkaprav0",
-    // "mail": "mailto:hi@arkaprav0.in",
   },
-  projects: {
-    "Notes & blog": {
-      url: "https://notes.arkaprav0.in",
-      tags: ["jotai/atom", "react", "nextjs", "cloudflare"],
+  experience: [
+    {
+      title: "ML/Solutions Engineer",
+      company: "HuEx",
+      companyUrl: "https://www.huex.ai/",
+      tagline: "I delivered almost 400% speedup using some python scripts as an intern, and I was hired as ML/Solutions Engineer",
+      projects: ["Drive thru automation using whisper ASR", "Google Maps review-manage-respond automation Pipeline"],
+      stack: ["Python", "Flask", "pytorch", "Docker", "AWS"],
     },
-    Linux: {
-      url: "https://github.com/torvalds/linux",
-      tags: ["c", "kernel", "unix", "os"],
+    {
+      title: "Product Engineer",
+      company: "SalesUp",
+      companyUrl: "https://salesup.club/",
+      tagline: "I was hired as a Product Engineer, working as a fullstack developer",
+      projects: ["Created a lead generator frontend", "created custom oidc/oauth server for custom auth requirements", "created a Chatgpt plugin integrating with existing backend"],
+      stack: ["typescript", "react", "nodejs", "nextjs", "docker", "OAuth", "OIDC"],
     },
-  },
+  ],
+  education: [
+    {
+      title: "Bachelor of Science (BS) in Data Science and Applications",
+      institute: "IIT Madras",
+      instituteUrl: "https://study.iitm.ac.in/",
+      started: "2022-05",
+      score: "8.7/10"
+    },
+    {
+      title: "Higher Secondary",
+      institute: "Rahara Ramakrishna Mission, High School",
+      instituteUrl: "https://www.rkmissionrahara.org/",
+      started: "2018-05",
+      score: "85.6%"
+    },
+    {
+      title: "Secondary",
+      institute: "Rahara Ramakrishna Mission",
+      instituteUrl: "https://www.rkmissionrahara.org/",
+      started: "2008-05",
+      score: "93%"
+    },
+
+  ],
   og: {
     image: icon.src,
   },
