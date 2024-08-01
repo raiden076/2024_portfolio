@@ -144,13 +144,57 @@ const projects = (await getCollection("projects")).sort(function (
         <header class="flex w-full">
           <h3 class="text-lg">/experience</h3>
         </header>
-        Coming soon. ..!
+        {
+          Config.experience.map((exp) => (
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 items-center ">
+                <h3 class="font-semibold">{exp.title}</h3>
+                <div class="overflow-hidden truncate flex gap-2 ">
+                  {exp.stack.map((tag) => (
+                    <div class="badge badge-neutral ">{tag}</div>
+                  ))}
+                </div>
+              </div>
+              <a href={exp.companyUrl} class="text-primary hover:underline">
+                {exp.company}
+              </a>
+              <div>
+                <p>{exp.tagline}</p>
+                <div class="flex flex-col">
+                  {exp.projects.map((project) => (
+                    <div class="flex gap-2">
+                      <div class="w-2" /> -{" "}
+                      <span class="font-extralight">{project}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        }
       </article>
       <article class="flex flex-col gap-8">
         <header class="flex w-full">
           <h3 class="text-lg">/education</h3>
         </header>
-        Coming soon. ..!
+        <!-- Coming soon. ..! -->
+        {
+          Config.education.map((education) => (
+            <div>
+              <h3 class="font-semibold">{education.title}</h3>
+              <div class="flex gap-4">
+                <a
+                  href={education.instituteUrl}
+                  class="text-primary hover:underline"
+                >
+                  {education.institute}
+                </a>
+                <p>started: {education.started}</p>
+              </div>
+              <p>score: {education.score}</p>
+            </div>
+          ))
+        }
       </article>
 
       <article class="flex flex-col gap-8">
