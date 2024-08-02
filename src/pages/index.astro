@@ -171,6 +171,9 @@ const projects = (await getCollection("projects")).sort(function (
                   ))}
                 </div>
               </div>
+              <p>
+                <strong>Duration:</strong> {exp.started} - {exp.ended ?? "_"}
+              </p>
             </div>
           ))
         }

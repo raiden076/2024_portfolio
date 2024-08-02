@@ -19,6 +19,8 @@ interface IConfig {
     tagline: string;
     projects: string[];
     stack: string[];
+    started: string;
+    ended?: string;
   }[];
   education: {
     title: string;
@@ -53,6 +55,8 @@ export const Config: IConfig = {
       tagline: "I delivered ~ 400% speedup using some python scripts as an intern, and I was hired as ML/Solutions Engineer",
       projects: ["Drive thru automation using whisper ASR", "Google Maps review-manage-respond automation Pipeline"],
       stack: ["Python", "Flask", "pytorch", "Docker", "AWS"],
+      started: "2022-10",
+      ended: "2023-08",
     },
     {
       title: "Product Engineer",
@@ -61,6 +65,7 @@ export const Config: IConfig = {
       tagline: "I was hired as a Product Engineer, working as a fullstack developer",
       projects: ["Created a lead generator frontend", "Created custom oidc/oauth server for custom auth requirements", "Created a Chatgpt plugin integrating with existing backend"],
       stack: ["typescript", "react", "nodejs", "nextjs", "docker", "OAuth", "OIDC", "gpt_store"],
+      started: "2023-10",
     },
   ],
   education: [
