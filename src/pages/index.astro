@@ -140,13 +140,13 @@ const projects = (await getCollection("projects")).sort(function (
         </section>
       </article>
 
-      <article class="flex flex-col gap-8">
+      <article class="flex flex-col gap-10">
         <header class="flex w-full">
           <h3 class="text-lg">/experience</h3>
         </header>
         {
           Config.experience.map((exp) => (
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
               <div class="flex gap-4 items-center ">
                 <h3 class="font-semibold">{exp.title}</h3>
                 <div class="overflow-hidden truncate flex gap-2 ">
@@ -158,8 +158,10 @@ const projects = (await getCollection("projects")).sort(function (
               <a href={exp.companyUrl} class="text-primary hover:underline">
                 {exp.company}
               </a>
-              <div>
-                <p>{exp.tagline}</p>
+              <div class="flex flex-col gap-2">
+                <p>
+                  <strong>{exp.tagline}</strong>
+                </p>
                 <div class="flex flex-col">
                   {exp.projects.map((project) => (
                     <div class="flex gap-2">
