@@ -155,7 +155,11 @@ const projects = (await getCollection("projects")).sort(function (
                   ))}
                 </div>
               </div>
-              <a href={exp.companyUrl} class="text-primary hover:underline">
+              <a
+                href={exp.companyUrl}
+                class="text-primary hover:underline"
+                target="_blank"
+              >
                 {exp.company}
               </a>
               <div class="flex flex-col gap-2">
@@ -191,6 +195,7 @@ const projects = (await getCollection("projects")).sort(function (
                 <a
                   href={education.instituteUrl}
                   class="text-primary hover:underline"
+                  target="_blank"
                 >
                   {education.institute}
                 </a>
