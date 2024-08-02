@@ -50,7 +50,7 @@ export const Config: IConfig = {
   experience: [
     {
       title: "ML/Solutions Engineer",
-      company: "HuEx",
+      company: "HuEx Labs",
       companyUrl: "https://www.huex.ai/",
       tagline: "I delivered ~ 400% speedup using some python scripts as an intern, and I was hired as ML/Solutions Engineer",
       projects: ["Drive thru automation using whisper ASR", "Google Maps review-manage-respond automation Pipeline"],
@@ -60,7 +60,7 @@ export const Config: IConfig = {
     },
     {
       title: "Product Engineer",
-      company: "SalesUp",
+      company: "SalesUp Inc.",
       companyUrl: "https://salesup.club/",
       tagline: "I was hired as a Product Engineer, working as a fullstack developer",
       projects: ["Created a lead generator frontend", "Created custom oidc/oauth server for custom auth requirements", "Created a Chatgpt plugin integrating with existing backend"],
